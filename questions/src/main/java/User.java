@@ -20,7 +20,7 @@ public class User {
     }
 
     public void setAge(Integer age) {
-        this.age = age;
+        this.age = age+3;
     }
 
     public String getPassword() {
@@ -36,7 +36,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return age == user.age &&
+        return age.equals( user.age) &&
                 Objects.equals(name, user.name) &&
                 Objects.equals(password, user.password);
     }
